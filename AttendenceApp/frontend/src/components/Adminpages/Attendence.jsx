@@ -3,6 +3,8 @@ import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import { SlNotebook } from "react-icons/sl";
 import { PiStudentFill } from 'react-icons/pi';
+import { NavLink } from 'react-router-dom';
+import { IoLogOut } from "react-icons/io5";
 
 const Attendence = () => {
   const [students,setStudents] = useState([]);
@@ -49,6 +51,10 @@ const Attendence = () => {
             })}
           </table>
         </div>
+        <div className='stu_logout'>
+          <NavLink className='stu_link' to="/"><IoLogOut/></NavLink>
+          <p>Logout</p>
+    </div>
     </div>
   )
 }
