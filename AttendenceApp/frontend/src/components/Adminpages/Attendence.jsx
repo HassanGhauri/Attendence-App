@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
-
-import { FaUserCircle } from "react-icons/fa";
+import { SlNotebook } from "react-icons/sl";
+import { PiStudentFill } from 'react-icons/pi';
 
 const Attendence = () => {
   const [students,setStudents] = useState([]);
@@ -16,15 +16,14 @@ const Attendence = () => {
     fetchStudents();
   },[])
   return (
+    
     <div>
       <div className='heading'>
-        <h1>
-          Students
-        </h1>
-      </div>
+          <h1><PiStudentFill/> Attend Inn</h1>
+        </div>
       <div className='at_heading'>
-        <div className='at_icon'><FaUserCircle/></div>
-        <h2>Students Attendence List</h2>
+        <div className='at_icon'><SlNotebook/></div>
+        <h2> Students Attendence List</h2>
       </div>
       
         <div className='stu_table'>
@@ -42,7 +41,7 @@ const Attendence = () => {
                 <tr key={idx}>
                   <td>{stu.name}</td>
                   <td>{stu.department}</td>
-                  <td>{stu.totalAttendence}</td>
+                  <td>{stu.totalattendence}</td>
                   <td>{stu.checkin}</td>
                   <td>{stu.checkout}</td>
                 </tr>

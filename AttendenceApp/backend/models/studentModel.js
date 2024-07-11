@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
-    seatNo:{
+    seatno:{
         type: Number,
         required: true
     },
@@ -12,8 +12,7 @@ const studentSchema = new Schema({
     },
     email:{
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     password:{
         type: String,
@@ -31,7 +30,7 @@ const studentSchema = new Schema({
         type: String,
         required: true
     },
-    totalAttendence:{
+    totalattendence:{
         type: Number,
         required: true
     }
