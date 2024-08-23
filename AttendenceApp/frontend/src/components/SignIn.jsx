@@ -5,6 +5,9 @@ import { PiStudentBold } from "react-icons/pi";
 import { TbPassword } from "react-icons/tb";
 import { MdEmail } from "react-icons/md";
 import {useNavigate} from 'react-router-dom'
+import { MdLabelImportant } from "react-icons/md";
+import { MdCelebration } from "react-icons/md";
+import image from './image.jpg'
 import axios from 'axios';
 const SignIn = () => {
   const[email,SetEmail] = useState('');
@@ -31,7 +34,19 @@ const SignIn = () => {
           <h1><PiStudentFill /> Attend Inn</h1>
         </div>
         <div className='heroPara'>
-          <h2>Welcome to Attend Inn, An efficient Online Attend Managment Portal.</h2>
+          <h2><span><MdCelebration/></span> Welcome to Attend Inn, An efficient Online Attendence Managment Portal. <span><MdCelebration/></span></h2>
+        </div>
+        <div className='instructions'>
+          <p><MdLabelImportant/>Please Sign in with the email and password provided to you  by the department head and 
+           view or mark your attendence.</p>
+        </div>
+        <div className='heroSection'>
+          <img src={image} />
+          <p><span><MdCelebration/></span> Mark Attendence on the web with no worries of paper attendence!<span><MdCelebration/></span></p>
+        </div>
+        <div className='heroSection1'>
+          <img src={image} />
+          <p><span><MdCelebration/></span> Mark Attendence on the web with no worries of paper attendence!<span><MdCelebration/></span></p>
         </div>
          <div className="create">
           <h2><PiStudentBold /> Sign In</h2>
@@ -50,7 +65,7 @@ const SignIn = () => {
               value={password}
               onChange={(e) => SetPassword(e.target.value)}
             ></input>
-            <button type='submit'>Add Blog</button>
+            <button type='submit'>Enter</button>
           </form>
     </div>
       
