@@ -17,7 +17,7 @@ const AddStudent = ({ setModal, onAddStudent }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      const data = axios.post("http://localhost:3000/api/student", {
+      const data = axios.post("https://attendence-app-backend.vercel.app/api/student", {
         seatno,
         name,
         email,

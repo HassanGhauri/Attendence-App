@@ -9,7 +9,7 @@ import { IoLogOut } from "react-icons/io5";
 const Attendence = () => {
   const [students,setStudents] = useState([]);
   const fetchStudents = async()=>{
-    const data = await axios.get("http://localhost:3000/api/student");
+    const data = await axios.get("https://attendence-app-backend.vercel.app/api/student");
     setStudents(data.data)
     console.log(data.data);
   }

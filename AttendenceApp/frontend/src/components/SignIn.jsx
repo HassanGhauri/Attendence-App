@@ -15,7 +15,7 @@ const SignIn = () => {
   const navigate = useNavigate();
   const handleSubmit = (e)=>{
     e.preventDefault();
-    axios.post("http://localhost:3000/api/student/login",{email,password})
+    axios.post("https://attendence-app-backend.vercel.app/api/student/login",{email,password})
     .then((res)=>{
       console.log(res.data.id);
       if(res.data.mssg === "User Success"){

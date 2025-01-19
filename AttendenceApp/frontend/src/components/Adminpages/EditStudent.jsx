@@ -15,7 +15,7 @@ const EditStudent = ({setEditModal,onEditStudent, student}) => {
   const [totalattendence, setTotalAttendence] = useState(Number);
   
   const fetchStudent = async()=>{
-    const data = await axios.get(`http://localhost:3000/api/student/${student._id}`);
+    const data = await axios.get(`https://attendence-app-backend.vercel.app/api/student/${student._id}`);
     setName(data.data.name);
     setEmail(data.data.email);
     setSeatNo(data.data.seatno);

@@ -39,7 +39,7 @@ const Students = () => {
   };
 
   const fetchStudents = async () => {
-    const data = await axios.get("http://localhost:3000/api/student");
+    const data = await axios.get("https://attendence-app-backend.vercel.app/api/student");
     setStudents(data.data);
   };
 
